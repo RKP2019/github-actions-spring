@@ -1,12 +1,17 @@
+RUN echo 'Setting Java version..'
 FROM openjdk:17-jdk-slim
 
+RUN echo 'Setting working directory...'
 WORKDIR /app
 
-ADD target/api-springboot-0.0.1-SNAPSHOT.jar /app/springapi-docker.jar
+RUN echo 'Trying to add file to app location...'
+ADD target/github-actions-spring.jar /app/github-actions-spring.jar
 
+RUN echo 'Exposing 8080..'
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "springapi-docker.jar"]
+RUN echo 'defining entry point...'
+ENTRYPOINT ["java", "-jar", "github-actions-spring.jar"]
 
 #FROM openjdk:17
 #EXPOSE 8080
