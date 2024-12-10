@@ -1,4 +1,3 @@
-RUN echo 'Setting Java version..'
 FROM openjdk:17-jdk-slim
 
 RUN echo 'Setting working directory...'
