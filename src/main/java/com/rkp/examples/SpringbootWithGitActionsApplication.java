@@ -12,7 +12,7 @@ public class SpringbootWithGitActionsApplication {
 
 	@GetMapping("/hello")
 	public String greetings(){
-		return "Hello, welcome to GitActions projects with RKP";
+		return "Hello , welcome to GitActions projects with RKP. Happy learning.";
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootWithGitActionsApplication.class, args);
