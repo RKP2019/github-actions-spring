@@ -7,10 +7,11 @@ RUN echo 'Copy to add file to app location...'
 #COPY target/github-actions-spring.jar /app/github-actions-spring.jar
 
 ARG JAR_FILE=/target/*.jar
-COPY ${JAR_FILE} /app/github-actions-spring.jar
+#COPY ${JAR_FILE} /app/github-actions-spring.jar
 
-#RUN echo 'Trying to add file to app location...'
-#ADD target/github-actions-spring.jar /app/github-actions-spring.jar
+
+RUN echo 'Trying to add file to app location...'
+ADD target/github-actions-spring.jar /app/github-actions-spring.jar
 
 RUN echo 'Setting working directory...'
 WORKDIR /app
