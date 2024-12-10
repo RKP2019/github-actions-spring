@@ -40,7 +40,7 @@ jobs:
           image: laxmirajeshjava/github-actions-spring
           tags: latest
           registry: docker.io
-          dockerfile: Dockerfile
+          #dockerfile: Dockerfile
           file: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
