@@ -1,8 +1,5 @@
 FROM openjdk:17-jdk-slim
 
-RUN echo 'Setting working directory...'
-WORKDIR /app
-
 RUN echo 'Exposing 8080..'
 EXPOSE 8080
 
@@ -11,6 +8,10 @@ COPY target/github-actions-spring.jar /app/github-actions-spring.jar
 
 #RUN echo 'Trying to add file to app location...'
 #ADD target/github-actions-spring.jar /app/github-actions-spring.jar
+
+RUN echo 'Setting working directory...'
+WORKDIR /app
+
 
 RUN echo 'defining entry point...'
 ENTRYPOINT ["java", "-jar", "github-actions-spring.jar"]
