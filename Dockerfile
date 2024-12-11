@@ -3,6 +3,10 @@ FROM openjdk:17-jdk-slim
 RUN echo 'Exposing 8080..'
 EXPOSE 8080
 
+RUN echo '---------before---------------'
+RUN pwd && ls
+RUN echo '---------after---------------'
+
 RUN echo 'Copy to add file to app location...'
 COPY ./target/github-actions-spring.jar ./app/github-actions-spring.jar
 
